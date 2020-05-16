@@ -9,7 +9,7 @@ export const FETCH_HOUSES_FAIL = 'FETCH_HOUSES_FAIL'
 export const getHouses = () => dispatch => {
     dispatch({ type: FETCH_HOUSES_START})
     axios
-        .get('https://anapioficeandfire.com/api/houses/')
+        .get('https://anapioficeandfire.com/api/houses?page=1&pageSize=1')
         .then(response =>
             dispatch({type: FETCH_HOUSES_SUCCESS, payload: response.data}))
             //console.log(FETCH_HOUSES_SUCCESS.payload)
